@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5a3eb0a2-1559-4bb7-b5d2-bbf121332715">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<field name="ID" class="java.lang.String"/>
+	<field name="fecha" class="java.lang.String"/>
+	<field name="matri" class="java.lang.String"/>
+	<field name="carr" class="java.lang.String"/>
+	<field name="libro" class="java.lang.String"/>
+	<field name="cat" class="java.lang.String"/>
+	<field name="estado" class="java.lang.String"/>
+	<variable name="estado_1" class="java.lang.Integer" resetType="Column" calculation="Count">
+		<variableExpression><![CDATA[$F{estado}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" backcolor="#006699" uuid="ff503e3f-5b24-4df7-b3f4-ebfd29d02933"/>
+				<staticText>
+					<reportElement x="20" y="10" width="284" height="33" forecolor="#FFFFFF" uuid="ec03e1b0-3327-4670-ae40-3e2cd3da22af"/>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[BIBLIOTECA UNIVERSITARIA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="164" y="63" width="253" height="20" forecolor="#FFFFFF" uuid="13f6605b-375e-45c1-b1a5-db318ae74fc2"/>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[INFORME DE PRESTAMOS]]></text>
+				</staticText>
+				<image>
+					<reportElement x="503" y="10" width="52" height="70" uuid="f55bc6d0-e287-47b6-9ab2-3ec2b7787769"/>
+					<imageExpression><![CDATA["Ventanas\\UBI_2.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="1"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="32">
+			<line>
+				<reportElement x="-20" y="20" width="595" height="1" forecolor="#666666" uuid="34732b0b-b3fd-436d-bf0f-2ecc68c0ba2e"/>
+			</line>
+			<staticText>
+				<reportElement x="36" y="1" width="64" height="20" uuid="1024bbe4-9e2a-4e11-bb0e-624446255755"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CEDULA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="100" y="1" width="156" height="20" uuid="2b73ddaf-4865-4615-9d26-67f0c5d58719"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TITULO DE LIBRO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="256" y="1" width="90" height="20" uuid="f00c074a-809d-4e37-833c-d5d45837af7a"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CATEGORIA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="1" width="79" height="20" uuid="0799a08b-8b10-4c7f-9a9a-df8c4fb2eec0"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CARRERA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="425" y="1" width="58" height="20" uuid="bb8cd7b4-4f82-4a37-9d86-0d0fe55c0b7f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[FECHA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="483" y="1" width="72" height="20" uuid="74f215fc-3fae-4505-8f6b-5048706eecb5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[OBS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="1" width="36" height="19" uuid="3447daa8-355b-4c69-8f39-b7dfe0ea94c5"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="53">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="51" width="555" height="1" uuid="f016aa20-6d93-4c88-8e1c-a8a2651d3573"/>
+			</line>
+			<textField>
+				<reportElement x="100" y="0" width="155" height="52" uuid="aa304463-87cb-460b-a82c-e763f1fc5f62"/>
+				<textFieldExpression><![CDATA[$F{libro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="36" y="0" width="64" height="20" uuid="6dc3f467-05d3-48c5-83ef-64f181e1d1a5"/>
+				<textFieldExpression><![CDATA[$F{matri}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="346" y="0" width="79" height="36" uuid="f324dbf4-0dc8-453e-8962-1da3e596b885"/>
+				<textFieldExpression><![CDATA[$F{carr}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="256" y="0" width="90" height="20" uuid="2f11030d-b7bb-4e75-a70c-0b2a21bca749"/>
+				<textFieldExpression><![CDATA[$F{cat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="425" y="0" width="58" height="20" uuid="3749ae51-4744-4fad-b6ab-30a17de614d8"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="483" y="0" width="72" height="20" uuid="d8e6e339-f6a1-4422-a0a4-34adc59e6f8b"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="36" height="20" uuid="5ec7a250-b32e-489e-af2a-baf8bd5462a7"/>
+				<textFieldExpression><![CDATA[$F{ID}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="19">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="84393f6b-6f5c-4808-b619-46dfdb6c2f82"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="515" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="2676626e-fc99-4db1-a257-0648f1e2c7c4"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="a7d4385b-e8df-4544-ba50-6292aa86a543"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>
